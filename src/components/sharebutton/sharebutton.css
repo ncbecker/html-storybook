@@ -7,16 +7,17 @@
   padding: 10px 20px;
 }
 
-.btn-play {
+.btn-share {
   border-radius: 12px;
   font-size: 0.5rem;
-  background: linear-gradient(180deg, #ed8770, #d9519d);
+  background: transparent;
+  border: 1px solid #fff;
   padding: 5px 20px;
   text-align: left;
   display: flex;
   align-items: center;
 }
 
-.btn-play > :first-child {
+.btn-share > :first-child {
   margin-right: 0.5rem;
 }
