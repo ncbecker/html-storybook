@@ -1,8 +1,8 @@
 import "./button.css";
-import buttonText from "./button-text.html";
-import buttonLogo from "./button-logo.html";
+import btnprimary from "./btn-primary.html";
+import btnsecondary from "./btn-secondary.html";
 
 export default { title: "Components/Button" };
 
-export const withText = () => buttonText;
-export const withLogo = () => buttonLogo;
+export const primary = () => btnprimary;
+export const secondary = () => btnsecondary;
