@@ -23,5 +23,18 @@
   justify-content: center;
 }
 
-.bottom-nav svg {
+.main-stop-active {
+  stop-color: #ed8770;
+}
+
+.alt-stop-active {
+  stop-color: #d9519d;
+}
+
+.main-stop-inactive {
+  stop-color: #63666e;
+}
+
+.alt-stop-inactive {
+  stop-color: #63666e;
 }
