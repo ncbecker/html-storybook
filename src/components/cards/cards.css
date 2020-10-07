@@ -1,0 +1,22 @@
+.card-playlistbig {
+  width: 188px;
+  height: 128px;
+  border: none;
+  background-image: url("../../assets/marcela-laskoski-YrtFlrLo2DQ-unsplash.png");
+  opacity: 0.5;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.description-playlist,
+.description-playlist:active,
+.description-playlist:visited,
+.description-playlist:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.description-playlist > * {
+  margin: 0;
+}
