@@ -1,5 +1,37 @@
 .btn {
   border-radius: 12px;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 75px;
+  min-height: 23px;
+}
+
+.btn > :first-child {
+  margin-right: 0.5rem;
+}
+
+.btn__svg {
+}
+
+.btn__text {
+  font-size: 0.5rem;
+  color: white;
+}
+
+.btn--active {
+  background: linear-gradient(#ed8770, #d9519d);
+  border: transparent;
+}
+
+.btn--inactive {
+  background: transparent;
+  border: 1px solid #fff;
+}
+
+/* .btn {
+  border-radius: 12px;
   font-size: 0.5rem;
   color: white;
   padding: 5px 20px;
@@ -22,4 +54,4 @@
 .btn-secondary {
   background: transparent;
   border: 1px solid #fff;
-}
+} */
