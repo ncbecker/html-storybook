@@ -1,5 +1,12 @@
 @import url("./assets/fonts/circular-std-font.css");
 
+:root {
+  --main-font-color: #fff;
+  --main-background-color: #151827;
+  --font-family: "Circular Std", sans-serif;
+  /* --dark-theme: invert(1); */
+}
+
 *,
 *::after,
 *::before {
@@ -7,12 +14,13 @@
 }
 
 body {
-  font-size: 16px;
-  background-color: #151827;
-  color: #fff;
   margin: 0;
-  font-family: "Circular Std", sans-serif;
+  font-size: 16px;
+  background-color: var(--main-background-color);
+  color: var(--main-font-color);
+  font-family: var(--font-family);
   font-weight: 400;
+  /* filter: var(--dark-theme, invert(1)); */
 }
 
 input,
@@ -21,6 +29,6 @@ select,
 optgroup,
 textarea {
   margin: 0;
-  font-family: "Circular Std", sans-serif;
+  font-family: var(--font-family);
   font-weight: 500;
 }
