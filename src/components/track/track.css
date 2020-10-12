@@ -1,0 +1,36 @@
+.track {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+}
+
+.track--avatar-box {
+  grid-column: 1 / 2;
+}
+
+.track--description-box {
+  grid-column: 2 / 3;
+  margin: 0 15px;
+  min-width: 250px;
+  font-size: 0.7rem;
+}
+
+.track--button-box {
+  grid-column: 3 / 4;
+  display: flex;
+  justify-content: center;
+}
+
+.track__artist-avatar {
+  height: 46px;
+  width: 46px;
+}
+
+.track button {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.track h3 {
+  margin: 0;
+}
