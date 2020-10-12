@@ -1,6 +1,9 @@
 import "./title.css";
 import title from "./title.html";
 
-export default { title: "Components/Title" };
+export default {
+  title: "Components/Title",
+  parameters: { layout: "centered" },
+};
 
 export const Main = () => title;

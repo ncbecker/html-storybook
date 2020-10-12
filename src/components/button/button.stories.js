@@ -3,7 +3,10 @@ import btnplay from "./btn-primary-play.html";
 import btnshare from "./btn-secondary-share.html";
 import btnfavorites from "./btn-secondary-addfavorites.html";
 
-export default { title: "Components/Button" };
+export default {
+  title: "Components/Button",
+  parameters: { layout: "centered" },
+};
 
 export const Play = () => btnplay;
 export const Share = () => btnshare;
