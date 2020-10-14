@@ -1,5 +1,4 @@
 import "./track.css";
-import artistAvatarSrc from "../../assets/michaeljackson.png";
 import playActionSrc from "../../assets/playactionbutton.svg";
 import pauseActionSrc from "../../assets/pauseactionbutton.svg";
 
@@ -20,7 +19,7 @@ export function createTrackElement(track) {
   divTrackBorder.className = "track--border";
 
   const artistAvatar = document.createElement("img");
-  artistAvatar.src = artistAvatarSrc;
+  artistAvatar.src = track.avatarSrc;
   artistAvatar.alt = `Artist Avatar ${track.artist}`;
   artistAvatar.className = "track__artist-avatar";
 
@@ -34,24 +33,24 @@ export function createTrackElement(track) {
 
   const playActionButton = document.createElement("button");
 
-  const playActionIcon = document.createElement("img");
-  playActionIcon.src = playActionSrc;
-  playActionIcon.alt = "Play Action Icon";
-  playActionIcon.className = "track__action-button";
+  const actionIcon = document.createElement("img");
+  actionIcon.src = playActionSrc;
+  actionIcon.alt = "Play Icon";
+  actionIcon.className = "track__action-button";
 
   let isPlaying = false;
 
   const playAudio = new Audio(track.audioSrc);
-  playActionButton.onclick = function () {
+
+  playActionButton.onclick = () => {
     if (isPlaying === false) {
       playAudio.play();
-      playActionIcon.src = pauseActionSrc;
-      isPlaying = true;
+      showPauseIcon(actionIcon);
     } else {
       playAudio.pause();
-      playActionIcon.src = playActionSrc;
-      isPlaying = false;
+      showPlayIcon(actionIcon);
     }
+    isPlaying = !isPlaying;
   };
 
   divTrack.append(
@@ -63,7 +62,17 @@ export function createTrackElement(track) {
   divAvatarBox.append(artistAvatar);
   divDescriptionBox.append(trackName, trackArtist);
   divButtonBox.append(playActionButton);
-  playActionButton.append(playActionIcon);
+  playActionButton.append(actionIcon);
 
   return divTrack;
 }
+
+const showPauseIcon = (pauseactionicon) => {
+  pauseactionicon.src = pauseActionSrc;
+  pauseactionicon.alt = "Pause Icon";
+};
+
+const showPlayIcon = (playactionicon) => {
+  playactionicon.src = playActionSrc;
+  playactionicon.alt = "Play Icon";
+};
