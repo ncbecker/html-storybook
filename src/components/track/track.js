@@ -1,6 +1,7 @@
 import "./track.css";
 import artistAvatarSrc from "../../assets/michaeljackson.png";
 import playActionSrc from "../../assets/playactionbutton.svg";
+import pauseActionSrc from "../../assets/pauseactionbutton.svg";
 
 export function createTrackElement(track) {
   const divTrack = document.createElement("div");
@@ -38,14 +39,20 @@ export function createTrackElement(track) {
   playActionIcon.alt = "Play Action Icon";
   playActionIcon.className = "track__action-button";
 
+  let isPlaying = false;
+
   const playAudio = new Audio(track.audioSrc);
   playActionButton.onclick = function () {
-    playAudio.play();
+    if (isPlaying === false) {
+      playAudio.play();
+      playActionIcon.src = pauseActionSrc;
+      isPlaying = true;
+    } else {
+      playAudio.pause();
+      playActionIcon.src = playActionSrc;
+      isPlaying = false;
+    }
   };
-
-  // playActionButton.onclick = function () {
-  //   playAudio.pause();
-  // };
 
   divTrack.append(
     divAvatarBox,
