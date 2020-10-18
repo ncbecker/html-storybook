@@ -1,4 +1,4 @@
-import { createTrackElement } from "./mainplayer";
+import { createMainPlayerElement } from "./mainplayer";
 
 export default {
   title: "Components/Main Player",

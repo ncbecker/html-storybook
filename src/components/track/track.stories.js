@@ -119,8 +119,8 @@ export const songs = () => {
 
   const container = document.createElement("section");
 
-  playlist.forEach((track) => {
-    const trackElement = createTrackElement(track);
+  playlist.forEach((tune) => {
+    const trackElement = createTrackElement(tune);
     container.append(trackElement);
   });
 

@@ -1,0 +1,33 @@
+.mainplayer button {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+}
+
+.mainplayer--controls-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.mainplayer--controls-box img {
+  margin: 5px;
+}
+
+.mainplayer--toolbar-box {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-template-rows: repeat(2, auto);
+}
+
+.mainplayer--toolbar-box button {
+  grid-row: 1;
+}
+
+.mainplayer--toolbar-box span {
+  grid-row: 2;
+  margin: 0 5px;
+  font-size: 0.75rem;
+}
